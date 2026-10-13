@@ -1,0 +1,31 @@
+* {
+    margin: 2px;
+    padding: 2px;
+}
+/*body의 배경색 변경 */
+body {
+    background-color: #bad3eb;
+}
+
+/* h1 태그의 글씨색 변경 */
+h1 {
+    color: black;
+}
+
+.blue {
+    color: blue;
+}
+/* #title {
+    color: red;
+} */
+p {
+    line-height: 1.6;
+    color: #0000ff
+}
+.card {
+    border: 1px solid;
+}
+
+#intro {
+    border-top: 2px solid;
+}

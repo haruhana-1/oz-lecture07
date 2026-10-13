@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f6f3;
+    color: #292929;
+    font-family: "Pretendard", "Apple SD Gothic Neo",
+                 sans-serif;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+/* 2. 공통 레이아웃 */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+/* 3. 헤더 */
+
+.header {
+    padding: 40px 0 20px;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vw, 5rem);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+/* 4. 네비게이션 */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    border: none;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #444444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #54748b;
+}
+
+.menu a:focus-visible {
+    outline: 2px solid #54748b;
+    outline-offset: 5px;
+}
+
+/* 5. 자기소개 */
+
+.intro-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro-text {
+    width: 100%;
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* 6. 작업물 */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 28px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666666;
+}
+
+/* 7. 연락처 */
+
+.contact-section {
+    border-top: 1px solid #dddddd;
+}
+
+fieldset {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 600;
+    color: #54748b;
+}
+
+form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    font: inherit;
+    background-color: #ffffff;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #54748b;
+    outline-offset: 2px;
+}
+
+form button {
+    margin-top: 24px;
+    padding: 14px 32px;
+
+    background-color: #54748b;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #38566b;
+}
+
+/* 8. 푸터 */
+
+.footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #777777;
+    font-size: 0.9rem;
+}
+
+/* 9. 태블릿 */
+
+@media (min-width: 600px) {
+
+    .nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* 10. 데스크톱 */
+
+@media (min-width: 900px) {
+
+    .intro-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .intro-text {
+        flex: 1;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 40%;
+        height: auto;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+}
+
+/* 11. 움직임 최소화 설정 */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .card,
+    .menu a,
+    form button {
+        transition: none;
+    }
+
+}
